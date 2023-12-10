@@ -111,12 +111,6 @@ module RP2040Kit:
     boot_btn.output ~ micro.qspi_ss_n
     boot_btn.pullup.value = "10k"
 
-    # boot pulldown resistor
-    r_boot_pulldown = new Resistor
-    r_boot_pulldown.value = "1k"
-    r_boot_pulldown.footprint = "Resistor_SMD:R_0402_1005Metric"
-    micro.qspi_ss_n ~ r_boot_pulldown.p1; r_boot_pulldown.p2 ~ micro.gnd
-
     # make all gpio pins available at the top level
     signal gpio0 ~ micro.gpio0
     signal gpio1 ~ micro.gpio1
