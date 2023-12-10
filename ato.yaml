@@ -1,2 +1,5 @@
+paths:
+  src: "."
+  footprints: "footprints"
 dependencies:
 - generics
