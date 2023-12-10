@@ -53,7 +53,7 @@ module RP2040Kit:
     qspi ~ flash.qspi
 
     # USB
-    usb = new USB2
+    usb_if = new USB2
     r_usb_d_plus = new Resistor
     r_usb_d_plus.value = "27R"
     r_usb_d_plus.footprint = "Resistor_SMD:R_0402_1005Metric"
@@ -62,9 +62,13 @@ module RP2040Kit:
     r_usb_d_minus.value = "27R"
     r_usb_d_minus.footprint = "Resistor_SMD:R_0402_1005Metric"
 
+    usb_conn = new _USBC_KH_TYPE_C_16P
+    usb_conn.data ~ usb_if
+    usb_conn.power.gnd ~ power.gnd
+
     # Connect series resistors to usb
-    usb.dp ~ r_usb_d_plus.p2; r_usb_d_plus.p1 ~ micro.usb_dp
-    usb.dm ~ r_usb_d_minus.p1; r_usb_d_minus.p2 ~ micro.usb_dm
+    usb_if.dp ~ r_usb_d_plus.p2; r_usb_d_plus.p1 ~ micro.usb_dp
+    usb_if.dm ~ r_usb_d_minus.p1; r_usb_d_minus.p2 ~ micro.usb_dm
 
     # Bypass capacitors 100nF - 3V3
     bypass_cap_100nF_1 = new BypassCap100nF
@@ -246,3 +250,50 @@ component _W25Q128JVEIQ:
     qspi.io1 ~ do
     qspi.io2 ~ io2
     qspi.io3 ~ io3
+
+
+component _USBC_KH_TYPE_C_16P:
+    mpn = "C709357"
+    footprint = "USB-C-SMD_KH-TYPE-C-16P"
+    # pins
+
+    signal gnd ~ pin A1
+    gnd ~ pin A12
+    gnd ~ pin B1
+    gnd ~ pin B12
+
+    signal vbus ~ pin A4
+    vbus ~ pin A9
+    vbus ~ pin B4
+    vbus ~ pin B9
+
+    signal dp ~ pin A6
+    dp ~ pin B6
+
+    signal dm ~ pin A7
+    dm ~ pin B7
+
+    signal cc1 ~ pin A5
+    signal cc2 ~ pin B5
+
+    signal sbu ~ pin A8
+    sbu ~ pin B8
+
+    signal shell ~ pin p1
+    shell ~ pin p2
+    shell ~ pin p3
+    shell ~ pin p4
+
+    # always ground the shell
+    shell ~ gnd
+
+    power = new Power
+    power.vcc ~ vbus
+    power.gnd ~ gnd
+
+    usb = new USB2
+    usb.dp ~ dp
+    usb.dm ~ dm
+
+    footprint = "USB-C-SMD_KH-TYPE-C-16P"
+    designator_prefix = "J"
