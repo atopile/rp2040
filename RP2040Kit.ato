@@ -63,7 +63,7 @@ module RP2040Kit:
     r_usb_d_minus.footprint = "Resistor_SMD:R_0402_1005Metric"
 
     usb_conn = new _USBC_KH_TYPE_C_16P
-    usb_conn.data ~ usb_if
+    usb_conn.usb ~ usb_if
     usb_conn.power.gnd ~ power.gnd
 
     # Connect series resistors to usb
