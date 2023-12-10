@@ -24,13 +24,10 @@ module RP2040Kit:
     i2c.sda ~ micro.gpio20
     i2c.scl ~ micro.gpio21
 
-    osc_interface = new OSCILLATOR_INTERFACE
-    osc_interface.input ~ micro.xin
-    osc_interface.output ~ micro.xout
-    osc_interface.gnd ~ micro.gnd
-
-    osc = new Oscillator_12MHz
-    osc_interface ~ osc.osc_interface
+    osc = new _Oscillator
+    osc.input ~ micro.xin
+    osc.output ~ micro.xout
+    osc.gnd ~ micro.gnd
 
     # SPI interface
     spi = new SPI
@@ -197,15 +194,19 @@ component _X322512MSB4SI:
 
 module _Oscillator:
     # the oscillator itself
+    signal input
+    signal output
+    signal gnd
+
     osc = new _X322512MSB4SI
-    osc_interface.input ~ osc.in
-    osc_interface.gnd ~ osc.gnd
+    input ~ osc.in
+    gnd ~ osc.gnd
 
     # output resistor
     r_osc = new Resistor
     r_osc.value = "1k"
     r_osc.footprint = "Resistor_SMD:R_0402_1005Metric"
-    osc_interface.output ~ r_osc.p1; r_osc.p2 ~ osc.out
+    output ~ r_osc.p1; r_osc.p2 ~ osc.out
 
     # load caps
     c_osc_1 = new Capacitor
@@ -215,8 +216,8 @@ module _Oscillator:
     c_osc_2.value = "20pF"
     c_osc_2.footprint = "Capacitor_SMD:C_0402_1005Metric"
 
-    osc_interface.input ~ c_osc_1.p1; c_osc_1.p2 ~ osc_interface.gnd
-    osc_interface.output ~ c_osc_2.p1; c_osc_2.p2 ~ osc_interface.gnd
+    input ~ c_osc_1.p1; c_osc_1.p2 ~ gnd
+    output ~ c_osc_2.p1; c_osc_2.p2 ~ gnd
 
 
 component _W25Q128JVEIQ:
