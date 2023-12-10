@@ -72,6 +72,7 @@ component RP2040:
     signal vcc ~ usb_vdd
     vcc ~ adc_avdd
     vcc ~ vreg_vin
+    vcc ~ iovdd
 
     # connect 1V reg to dvdd
     vreg_vout ~ dvdd
