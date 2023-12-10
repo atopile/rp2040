@@ -1,3 +1,5 @@
+import RP2040 from "RP2040.ato"
+
 import Resistor from "generics/resistor.ato"
 import Capacitor from "generics/capacitor.ato"
 
@@ -44,7 +46,6 @@ module RP2040Kit:
     qspi.io1 ~ micro.qspi_sd1
     qspi.io2 ~ micro.qspi_sd2
     qspi.io3 ~ micro.qspi_sd3
-    qspi.gnd ~ micro.gnd
 
     # Flash
     flash = new _W25Q128JVEIQ
@@ -112,7 +113,6 @@ module RP2040Kit:
     r_boot_pulldown.footprint = "Resistor_SMD:R_0402_1005Metric"
     micro.qspi_ss_n ~ r_boot_pulldown.p1; r_boot_pulldown.p2 ~ micro.gnd
 
-
     # make all gpio pins available at the top level
     signal gpio0 ~ micro.gpio0
     signal gpio1 ~ micro.gpio1
@@ -149,8 +149,8 @@ module RP2040Kit:
 component BypassCap from Capacitor:
     footprint = "Capacitor_SMD:C_0402_1005Metric"
     power = new Power
-    power.vcc ~ 1
-    power.gnd ~ 2
+    power.vcc ~ p1
+    power.gnd ~ p2
 
 
 component BypassCap100nF from BypassCap:
@@ -178,8 +178,8 @@ module _ButtonPullup:
     pullup.value = "10k"
     pullup.footprint = "Resistor_SMD:R_0402_1005Metric"
 
-    power.vcc ~ pullup.p1; pullup.p2 ~ btn.in; btn.out ~ power.gnd
-    output ~ btn.in
+    power.vcc ~ pullup.p1; pullup.p2 ~ btn.p1; btn.p2 ~ power.gnd
+    output ~ pullup.p2
 
 
 component _X322512MSB4SI:
@@ -246,4 +246,3 @@ component _W25Q128JVEIQ:
     qspi.io1 ~ do
     qspi.io2 ~ io2
     qspi.io3 ~ io3
-    qspi.gnd ~ gnd
