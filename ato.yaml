@@ -1,3 +1,2 @@
-lib-deps:
-
-
+dependencies:
+- generics
