@@ -186,10 +186,10 @@ component _X322512MSB4SI:
     frequency = "12MHz"
     mpn = "C9002"
     footprint = "lib:OSC-SMD_4P-L3.2-W2.5-BL"
-    signal in ~ pin p1
-    signal out ~ pin p3
-    signal gnd ~ pin p2
-    gnd ~ pin p4
+    signal in ~ pin 1
+    signal out ~ pin 3
+    signal gnd ~ pin 2
+    gnd ~ pin 4
 
 
 module _Oscillator:
