@@ -1,0 +1,118 @@
+component RP2040:
+    footprint = "LQFN-56_L7.0-W7.0-P0.4-EP"
+    lcsc_id = "C2040"
+    # pins
+    signal GPIO7 ~ pin p9
+    signal GPIO6 ~ pin p8
+    signal GPIO5 ~ pin p7
+    signal GPIO4 ~ pin p6
+    signal GND ~ pin p57
+    signal QSPI_SS ~ pin p56
+    signal QSPI_SD1 ~ pin p55
+    signal QSPI_SD2 ~ pin p54
+    signal QSPI_SD0 ~ pin p53
+    signal QSPI_SCLK ~ pin p52
+    signal QSPI_SD3 ~ pin p51
+    signal DVDD ~ pin p50
+    signal GPIO3 ~ pin p5
+    signal IOVDD ~ pin p49
+    signal USB_VDD ~ pin p48
+    signal USB_DP ~ pin p47
+    signal USB_DM ~ pin p46
+    signal VREG_VOUT ~ pin p45
+    signal VREG_IN ~ pin p44
+    signal ADC_AVDD ~ pin p43
+    signal IOVDD ~ pin p42
+    signal GPIO29_ADC3 ~ pin p41
+    signal GPIO28_ADC2 ~ pin p40
+    signal GPIO2 ~ pin p4
+    signal GPIO27_ADC1 ~ pin p39
+    signal GPIO26_ADC0 ~ pin p38
+    signal GPIO25 ~ pin p37
+    signal GPIO24 ~ pin p36
+    signal GPIO23 ~ pin p35
+    signal GPIO22 ~ pin p34
+    signal IOVDD ~ pin p33
+    signal GPIO21 ~ pin p32
+    signal GPIO20 ~ pin p31
+    signal GPIO19 ~ pin p30
+    signal GPIO1 ~ pin p3
+    signal GPIO18 ~ pin p29
+    signal GPIO17 ~ pin p28
+    signal GPIO16 ~ pin p27
+    signal RUN ~ pin p26
+    signal SWD ~ pin p25
+    signal SWCLK ~ pin p24
+    signal DVDD ~ pin p23
+    signal IOVDD ~ pin p22
+    signal XOUT ~ pin p21
+    signal XIN ~ pin p20
+    signal GPIO0 ~ pin p2
+    signal TESTEN ~ pin p19
+    signal GPIO15 ~ pin p18
+    signal GPIO14 ~ pin p17
+    signal GPIO13 ~ pin p16
+    signal GPIO12 ~ pin p15
+    signal GPIO11 ~ pin p14
+    signal GPIO10 ~ pin p13
+    signal GPIO9 ~ pin p12
+    signal GPIO8 ~ pin p11
+    signal IOVDD ~ pin p10
+    signal IOVDD ~ pin p1
+
+    # pin types
+    GPIO7.type = bidirectional
+    GPIO6.type = bidirectional
+    GPIO5.type = bidirectional
+    GPIO4.type = bidirectional
+    GND.type = bidirectional
+    QSPI_SS.type = bidirectional
+    QSPI_SD1.type = bidirectional
+    QSPI_SD2.type = bidirectional
+    QSPI_SD0.type = bidirectional
+    QSPI_SCLK.type = output
+    QSPI_SD3.type = bidirectional
+    DVDD.type = bidirectional
+    GPIO3.type = bidirectional
+    IOVDD.type = bidirectional
+    USB_VDD.type = bidirectional
+    USB_DP.type = bidirectional
+    USB_DM.type = bidirectional
+    VREG_VOUT.type = bidirectional
+    VREG_IN.type = bidirectional
+    ADC_AVDD.type = bidirectional
+    IOVDD.type = bidirectional
+    GPIO29_ADC3.type = bidirectional
+    GPIO28_ADC2.type = bidirectional
+    GPIO2.type = bidirectional
+    GPIO27_ADC1.type = bidirectional
+    GPIO26_ADC0.type = bidirectional
+    GPIO25.type = bidirectional
+    GPIO24.type = bidirectional
+    GPIO23.type = bidirectional
+    GPIO22.type = bidirectional
+    IOVDD.type = bidirectional
+    GPIO21.type = bidirectional
+    GPIO20.type = bidirectional
+    GPIO19.type = bidirectional
+    GPIO1.type = bidirectional
+    GPIO18.type = bidirectional
+    GPIO17.type = bidirectional
+    GPIO16.type = bidirectional
+    RUN.type = input
+    SWD.type = bidirectional
+    SWCLK.type = output
+    DVDD.type = bidirectional
+    IOVDD.type = bidirectional
+    XIN.type = input
+    GPIO0.type = bidirectional
+    GPIO15.type = bidirectional
+    GPIO14.type = bidirectional
+    GPIO13.type = bidirectional
+    GPIO12.type = bidirectional
+    GPIO11.type = bidirectional
+    GPIO10.type = bidirectional
+    GPIO9.type = bidirectional
+    GPIO8.type = bidirectional
+    IOVDD.type = bidirectional
+    IOVDD.type = bidirectional

@@ -76,7 +76,7 @@ component RP2040:
     # connect 1V reg to dvdd
     vreg_vout ~ dvdd
 
-    footprint = "lib:LQFN-56_L7.0-W7.0-P0.4-EP"
+    footprint = "LQFN-56_L7.0-W7.0-P0.4-EP"
     mpn = "C2040"
 
     designator_prefix = "U"

@@ -1,5 +1,8 @@
 paths:
   src: "."
   footprints: "footprints"
+builds:
+  default:
+    entry: RP2040Kit.ato:RP2040Kit
 dependencies:
 - generics
