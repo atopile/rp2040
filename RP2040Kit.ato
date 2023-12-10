@@ -7,18 +7,6 @@ import QSPI from "generics/interfaces.ato"
 import SPI from "generics/interfaces.ato"
 import USB2 from "generics/interfaces.ato"
 
-import Button_Pullup from "button.ato"
-import ButtonTS1187A from "button.ato"
-import Oscillator_12MHz from "oscillators/oscillator.ato"
-import W25Q128JVEIQ from "W25Q128JVEIQ.ato"
-
-
-module _NormallyOpenSwitch:
-    # this module should be replaced with a normally open switch,
-    # implementing the same interface if you want the boot and reset
-    signal p1
-    signal p2
-
 
 module RP2040Kit:
     # Microcontroller
@@ -62,7 +50,7 @@ module RP2040Kit:
     qspi.gnd ~ micro.gnd
 
     # Flash
-    flash = new W25Q128JVEIQ
+    flash = new _W25Q128JVEIQ
     power ~ flash.power
     qspi ~ flash.qspi
 
@@ -111,17 +99,17 @@ module RP2040Kit:
     power_1V ~ bypass_cap_1uF_1.power
 
     # Reset
-    reset_btn = new Button_Pullup
+    reset_btn = new _ButtonPullup
     reset_btn.power ~ power
     reset_btn.output ~ micro.run
 
     # Boot
-    boot_btn = new Button_Pullup
+    boot_btn = new _ButtonPullup
     boot_btn.power ~ power
     boot_btn.output ~ micro.qspi_ss_n
     boot_btn.pullup.value = "10k"
 
-    # pulldown resistor
+    # boot pulldown resistor
     r_boot_pulldown = new Resistor
     r_boot_pulldown.value = "1k"
     r_boot_pulldown.footprint = "Resistor_SMD:R_0402_1005Metric"
@@ -174,3 +162,87 @@ component BypassCap100nF from BypassCap:
 
 component BypassCap1uF from BypassCap:
     value = "1uF"
+
+
+module _NormallyOpenSwitch:
+    # this module should be replaced with a normally open switch,
+    # implementing the same interface if you want the boot and reset
+    signal p1
+    signal p2
+
+
+module _ButtonPullup:
+    btn = new _NormallyOpenSwitch
+
+    signal output
+    power = new Power
+
+    pullup = new Resistor
+    pullup.value = "10k"
+    pullup.footprint = "Resistor_SMD:R_0402_1005Metric"
+
+    power.vcc ~ pullup.p1; pullup.p2 ~ btn.in; btn.out ~ power.gnd
+    output ~ btn.in
+
+
+component _X322512MSB4SI:
+    frequency = "12MHz"
+    mpn = "C9002"
+    footprint = "lib:OSC-SMD_4P-L3.2-W2.5-BL"
+    signal in ~ pin p1
+    signal out ~ pin p3
+    signal gnd ~ pin p2
+    gnd ~ pin p4
+
+
+module _Oscillator:
+    # the oscillator itself
+    osc = new _X322512MSB4SI
+    osc_interface.input ~ osc.in
+    osc_interface.gnd ~ osc.gnd
+
+    # output resistor
+    r_osc = new Resistor
+    r_osc.value = "1k"
+    r_osc.footprint = "Resistor_SMD:R_0402_1005Metric"
+    osc_interface.output ~ r_osc.p1; r_osc.p2 ~ osc.out
+
+    # load caps
+    c_osc_1 = new Capacitor
+    c_osc_1.value = "20pF"
+    c_osc_1.footprint = "Capacitor_SMD:C_0402_1005Metric"
+    c_osc_2 = new Capacitor
+    c_osc_2.value = "20pF"
+    c_osc_2.footprint = "Capacitor_SMD:C_0402_1005Metric"
+
+    osc_interface.input ~ c_osc_1.p1; c_osc_1.p2 ~ osc_interface.gnd
+    osc_interface.output ~ c_osc_2.p1; c_osc_2.p2 ~ osc_interface.gnd
+
+
+component _W25Q128JVEIQ:
+    footprint = "WSON-8_L6.0-W8.0-P1.27-BL-EP"
+    mpn = "C401662"
+
+    # pins
+    signal ncs ~ pin 1
+    signal do ~ pin 2
+    signal io2 ~ pin 3
+    signal gnd ~ pin 4
+    signal di ~ pin 5
+    signal clk ~ pin 6
+    signal io3 ~ pin 7
+    signal vcc ~ pin 8
+    gnd ~ pin 9
+
+    power = new Power
+    power.gnd ~ gnd
+    power.vcc ~ vcc
+
+    qspi = new QSPI
+    qspi.cs ~ ncs
+    qspi.sck ~ clk
+    qspi.io0 ~ di
+    qspi.io1 ~ do
+    qspi.io2 ~ io2
+    qspi.io3 ~ io3
+    qspi.gnd ~ gnd
