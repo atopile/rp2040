@@ -5,14 +5,19 @@ import I2C from "generics/interfaces.ato"
 import Power from "generics/interfaces.ato"
 import QSPI from "generics/interfaces.ato"
 import SPI from "generics/interfaces.ato"
-
-import USB2 from "generics.ato"
-import OSCILLATOR_INTERFACE from "generics.ato"
+import USB2 from "generics/interfaces.ato"
 
 import Button_Pullup from "button.ato"
 import ButtonTS1187A from "button.ato"
 import Oscillator_12MHz from "oscillators/oscillator.ato"
 import W25Q128JVEIQ from "W25Q128JVEIQ.ato"
+
+
+module _NormallyOpenSwitch:
+    # this module should be replaced with a normally open switch,
+    # implementing the same interface if you want the boot and reset
+    signal p1
+    signal p2
 
 
 module RP2040Kit:
@@ -61,7 +66,7 @@ module RP2040Kit:
     power ~ flash.power
     qspi ~ flash.qspi
 
-    # usb
+    # USB
     usb = new USB2
     r_usb_d_plus = new Resistor
     r_usb_d_plus.value = "27R"
@@ -105,7 +110,7 @@ module RP2040Kit:
     bypass_cap_1uF_1 = new BypassCap1uF
     power_1V ~ bypass_cap_1uF_1.power
 
-    # # Reset
+    # Reset
     reset_btn = new Button_Pullup
     reset_btn.power ~ power
     reset_btn.output ~ micro.run
