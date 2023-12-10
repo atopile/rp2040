@@ -279,10 +279,10 @@ component _USBC_KH_TYPE_C_16P:
     signal sbu ~ pin A8
     sbu ~ pin B8
 
-    signal shell ~ pin p1
-    shell ~ pin p2
-    shell ~ pin p3
-    shell ~ pin p4
+    signal shell ~ pin 1
+    shell ~ pin 2
+    shell ~ pin 3
+    shell ~ pin 4
 
     # always ground the shell
     shell ~ gnd
