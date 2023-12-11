@@ -231,7 +231,6 @@ component _W25Q128JVSIQ:
     signal clk ~ pin 6
     signal io3 ~ pin 7
     signal vcc ~ pin 8
-    gnd ~ pin 9
 
     power = new Power
     power.gnd ~ gnd
