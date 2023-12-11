@@ -48,7 +48,7 @@ module RP2040Kit:
     qspi.io3 ~ micro.qspi_sd3
 
     # Flash
-    flash = new _W25Q128JVEIQ
+    flash = new _W25Q128JVSIQ
     power ~ flash.power
     qspi ~ flash.qspi
 
@@ -183,7 +183,7 @@ module _ButtonPullup:
 component _X322512MSB4SI:
     frequency = "12MHz"
     mpn = "C9002"
-    footprint = "lib:OSC-SMD_4P-L3.2-W2.5-BL"
+    footprint = "OSC-SMD_4P-L3.2-W2.5-BL"
     signal in ~ pin 1
     signal out ~ pin 3
     signal gnd ~ pin 2
@@ -218,9 +218,9 @@ module _Oscillator:
     output ~ c_osc_2.p1; c_osc_2.p2 ~ gnd
 
 
-component _W25Q128JVEIQ:
-    footprint = "WSON-8_L6.0-W8.0-P1.27-BL-EP"
-    mpn = "C401662"
+component _W25Q128JVSIQ:
+    footprint = "SOIC-8_L5.3-W5.3-P1.27-LS8.0-BL"
+    mpn = "C97521"
 
     # pins
     signal ncs ~ pin 1
