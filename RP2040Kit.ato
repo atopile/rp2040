@@ -56,11 +56,11 @@ module RP2040Kit:
     usb_if = new USB2
     r_usb_d_plus = new Resistor
     r_usb_d_plus.value = "27R"
-    r_usb_d_plus.footprint = "R0603"
+    r_usb_d_plus.footprint = "R0402"
 
     r_usb_d_minus = new Resistor
     r_usb_d_minus.value = "27R"
-    r_usb_d_minus.footprint = "R0603"
+    r_usb_d_minus.footprint = "R0402"
 
     # Connect series resistors to usb
     usb_if.dp ~ r_usb_d_plus.p2; r_usb_d_plus.p1 ~ micro.usb_dp
