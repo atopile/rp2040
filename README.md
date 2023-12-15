@@ -1,9 +1,5 @@
 # RP2040
 
-## Overview
-
-This package should include all the basics needed to layout an RP2040 microcontroller.
-
 ## Installation
 Run in the terminal:
 
@@ -12,6 +8,12 @@ Run in the terminal:
 Add to your ato project:
 
 ```import RP2040Kit from "rp2040/rp2040.ato"```
+
+[LINK](https://gitlab.atopile.io/packages/RP2040) to the repo.
+
+## Overview
+
+This package should include all the basics needed to layout an RP2040 microcontroller.
 
 ## Features
 
@@ -46,6 +48,11 @@ Add to your ato project:
 Here is roughly what's going on in the module:
 
 ![whats-going-on-in-the-module](docs/rp2040Kit.png)
+
+And what you will actually have to deal with inside the chip:
+
+![courtesy_of_john_mcmaster](https://siliconpr0n.org/map/raspberry-pi/rp2-b0/single/raspberry-pi_rp2-b0_mcmaster_s1-9_vc60x.jpg)
+*Courstesy of John Mcmaster*
 
 ## Contributing
 
