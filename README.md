@@ -49,8 +49,7 @@ Here is roughly what's going on in the module:
 
 ![whats-going-on-in-the-module](docs/rp2040Kit.png)
 
-And what you will actually have to deal with inside the chip:
-
+What you have to deal with:
 ![courtesy_of_john_mcmaster](https://siliconpr0n.org/map/raspberry-pi/rp2-b0/single/raspberry-pi_rp2-b0_mcmaster_s1-9_vc60x.jpg)
 *Courstesy of John Mcmaster*
 
