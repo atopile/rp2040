@@ -1,4 +1,4 @@
-# RP2040 Module
+# RP2040
 
 ## Overview
 
