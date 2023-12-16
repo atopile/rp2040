@@ -63,4 +63,4 @@ This RP2040 module documentation is provided under the [MIT License](https://ope
 
 ## Contact
 
-For further inquiries or support, please contact us at [narayan@atopile.io](mailto:email@example.com).
+For further inquiries or support, please contact us at [narayan@atopile.io](mailto:narayan@atopile.io).
