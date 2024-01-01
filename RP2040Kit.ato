@@ -211,7 +211,7 @@ module _Oscillator:
     c_osc_2.footprint = "C0402"
 
     input ~ c_osc_1.p1; c_osc_1.p2 ~ gnd
-    output ~ c_osc_2.p1; c_osc_2.p2 ~ gnd
+    osc.out ~ c_osc_2.p1; c_osc_2.p2 ~ gnd
 
 
 component _W25Q128JVSIQ:
