@@ -38,3 +38,5 @@ venv/
 
 # .ato directory
 .ato/
+
+.vscode/

@@ -148,11 +148,11 @@ component BypassCap from Capacitor:
 
 
 component BypassCap100nF from BypassCap:
-    value = "100nF"
+    value = 100nF +/- 20%
 
 
 component BypassCap1uF from BypassCap:
-    value = "1uF"
+    value = 1uF +/- 20%
 
 
 module _NormallyOpenSwitch:
@@ -204,10 +204,10 @@ module _Oscillator:
 
     # load caps
     c_osc_1 = new Capacitor
-    c_osc_1.value = "20pF"
+    c_osc_1.value = 20pF +/- 20%
     c_osc_1.footprint = "C0402"
     c_osc_2 = new Capacitor
-    c_osc_2.value = "20pF"
+    c_osc_2.value = 20pF +/- 20%
     c_osc_2.footprint = "C0402"
 
     input ~ c_osc_1.p1; c_osc_1.p2 ~ gnd
