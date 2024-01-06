@@ -55,19 +55,11 @@ module RP2040Kit:
     # USB
     usb_if = new USB2
     r_usb_d_plus = new Resistor
-<<<<<<< Updated upstream
-    r_usb_d_plus.value = "27R"
-    r_usb_d_plus.footprint = "R0402"
-
-    r_usb_d_minus = new Resistor
-    r_usb_d_minus.value = "27R"
-=======
     r_usb_d_plus.value = 27kohms +/- 5%
     r_usb_d_plus.footprint = "R0402"
 
     r_usb_d_minus = new Resistor
     r_usb_d_minus.value = 27kohms +/- 5%
->>>>>>> Stashed changes
     r_usb_d_minus.footprint = "R0402"
 
     # Connect series resistors to usb
@@ -113,11 +105,7 @@ module RP2040Kit:
     boot_btn = new _ButtonPullup
     boot_btn.power ~ power
     boot_btn.output ~ micro.qspi_ss_n
-<<<<<<< Updated upstream
-    boot_btn.pullup.value = "10k"
-=======
     boot_btn.pullup.value = 10kohms +/- 5%
->>>>>>> Stashed changes
 
     # make all gpio pins available at the top level
     signal gpio0 ~ micro.gpio0
@@ -181,11 +169,7 @@ module _ButtonPullup:
     power = new Power
 
     pullup = new Resistor
-<<<<<<< Updated upstream
-    pullup.value = "10k"
-=======
     pullup.value = 10kohms +/- 5%
->>>>>>> Stashed changes
     pullup.footprint = "R0402"
 
     power.vcc ~ pullup.p1; pullup.p2 ~ btn.p1; btn.p2 ~ power.gnd
@@ -214,11 +198,7 @@ module _Oscillator:
 
     # output resistor
     r_osc = new Resistor
-<<<<<<< Updated upstream
-    r_osc.value = "1k"
-=======
     r_osc.value = 1kohms +/- 5%
->>>>>>> Stashed changes
     r_osc.footprint = "R0402"
     output ~ r_osc.p1; r_osc.p2 ~ osc.out
 
