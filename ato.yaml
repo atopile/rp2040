@@ -1,7 +1,4 @@
-ato-version: v0.3.0
-paths:
-  src: "."
-  footprints: "footprints"
+ato-version: v0.2.9
 builds:
   default:
     entry: RP2040Kit.ato:RP2040Kit
