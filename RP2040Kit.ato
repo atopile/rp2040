@@ -56,11 +56,11 @@ module RP2040Kit:
     usb_if = new USB2
     r_usb_d_plus = new Resistor
     r_usb_d_plus.value = 27kohms +/- 5%
-    r_usb_d_plus.package = "0402"
+    r_usb_d_plus.footprint = "R0402"
 
     r_usb_d_minus = new Resistor
     r_usb_d_minus.value = 27kohms +/- 5%
-    r_usb_d_minus.package = "0402"
+    r_usb_d_minus.footprint = "R0402"
 
     # Connect series resistors to usb
     usb_if.dp ~ r_usb_d_plus.p2; r_usb_d_plus.p1 ~ micro.usb_dp
@@ -141,7 +141,7 @@ module RP2040Kit:
 
 
 component BypassCap from Capacitor:
-    package = "0402"
+    footprint = "R0402"
     power = new Power
     power.vcc ~ p1
     power.gnd ~ p2
@@ -170,7 +170,7 @@ module _ButtonPullup:
 
     pullup = new Resistor
     pullup.value = 10kohms +/- 5%
-    pullup.package = "0402"
+    pullup.footprint = "R0402"
 
     power.vcc ~ pullup.p1; pullup.p2 ~ btn.p1; btn.p2 ~ power.gnd
     output ~ pullup.p2
@@ -199,16 +199,16 @@ module _Oscillator:
     # output resistor
     r_osc = new Resistor
     r_osc.value = 1kohms +/- 5%
-    r_osc.package = "0402"
+    r_osc.footprint = "R0402"
     output ~ r_osc.p1; r_osc.p2 ~ osc.out
 
     # load caps
     c_osc_1 = new Capacitor
     c_osc_1.value = 20pF +/- 20%
-    c_osc_1.package = "0402"
+    c_osc_1.footprint = "C0402"
     c_osc_2 = new Capacitor
     c_osc_2.value = 20pF +/- 20%
-    c_osc_2.package = "0402"
+    c_osc_2.footprint = "C0402"
 
     input ~ c_osc_1.p1; c_osc_1.p2 ~ gnd
     osc.out ~ c_osc_2.p1; c_osc_2.p2 ~ gnd
