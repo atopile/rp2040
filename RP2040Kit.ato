@@ -8,6 +8,7 @@ import Power from "generics/interfaces.ato"
 import QSPI from "generics/interfaces.ato"
 import SPI from "generics/interfaces.ato"
 import USB2 from "generics/interfaces.ato"
+import UART from "generics/interfaces.ato"
 
 
 module RP2040Kit:
@@ -30,6 +31,11 @@ module RP2040Kit:
     osc.input ~ micro.xin
     osc.output ~ micro.xout
     osc.gnd ~ micro.gnd
+
+    # UART interface
+    uart = new UART
+    uart.tx ~ micro.gpio4
+    uart.rx ~ micro.gpio5
 
     # SPI interface
     spi = new SPI
