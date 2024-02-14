@@ -2,6 +2,7 @@ import RP2040 from "RP2040.ato"
 
 import Resistor from "generics/resistors.ato"
 import Capacitor from "generics/capacitors.ato"
+import ButtonPullup from "generics/buttons.ato"
 
 import I2C from "generics/interfaces.ato"
 import Power from "generics/interfaces.ato"
@@ -112,14 +113,14 @@ module RP2040Kit:
     power_1V ~ bypass_cap_1uF_1.power
 
     # Reset
-    reset_btn = new _ButtonPullup
+    reset_btn = new ButtonPullup
     reset_btn.power ~ power
-    reset_btn.output ~ micro.run
+    reset_btn.out ~ micro.run
 
     # Boot
-    boot_btn = new _ButtonPullup
+    boot_btn = new ButtonPullup
     boot_btn.power ~ power
-    boot_btn.output ~ micro.qspi_ss_n
+    boot_btn.out ~ micro.qspi_ss_n
     boot_btn.pullup.value = 10kohms +/- 5%
 
     # make all gpio pins available at the top level
@@ -168,27 +169,6 @@ component BypassCap100nF from BypassCap:
 
 component BypassCap1uF from BypassCap:
     value = 1uF +/- 20%
-
-
-module _NormallyOpenSwitch:
-    # this module should be replaced with a normally open switch,
-    # implementing the same interface if you want the boot and reset
-    signal p1
-    signal p2
-
-
-module _ButtonPullup:
-    btn = new _NormallyOpenSwitch
-
-    signal output
-    power = new Power
-
-    pullup = new Resistor
-    pullup.value = 10kohms +/- 5%
-    pullup.footprint = "R0402"
-
-    power.vcc ~ pullup.p1; pullup.p2 ~ btn.p1; btn.p2 ~ power.gnd
-    output ~ pullup.p2
 
 
 component _X322512MSB4SI:
