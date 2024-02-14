@@ -44,6 +44,12 @@ module RP2040Kit:
     spi.miso ~ micro.gpio8
     spi.sck ~ micro.gpio10
 
+    spi1 = new SPI
+    spi1.cs ~ micro.gpio7
+    spi1.mosi ~ micro.gpio11
+    spi1.miso ~ micro.gpio8
+    spi1.sck ~ micro.gpio10
+
     # QSPI interface
     qspi = new QSPI
     qspi.cs ~ micro.qspi_ss_n
