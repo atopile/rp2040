@@ -59,7 +59,10 @@ module RP2040Kit:
     qspi ~ flash.qspi
 
     # USB
-    usb_if = new USB2
+    usb_if = new USB2 # depricated name
+    usb2 = new USB2
+    usb_if ~ usb2
+
     r_usb_d_plus = new Resistor
     r_usb_d_plus.value = 27kohms +/- 5%
     r_usb_d_plus.footprint = "R0402"
