@@ -4,13 +4,7 @@ import Resistor from "generics/resistors.ato"
 import Capacitor from "generics/capacitors.ato"
 import ButtonPullup from "generics/buttons.ato"
 
-import Power from "generics/interfaces.ato"
-import I2C from "generics/interfaces.ato"
-import QSPI from "generics/interfaces.ato"
-import SPI from "generics/interfaces.ato"
-import USB2 from "generics/interfaces.ato"
-import UART from "generics/interfaces.ato"
-
+from "generics/interfaces.ato" import Power, I2C, QSPI, SPI, USB2, UART
 
 module RP2040_3v3_Power:
     # Microcontroller
@@ -39,6 +33,17 @@ module RP2040_3v3_Power:
     # Bypass capacitors 1uF - 3V3
     bypass_cap_1uF = new BypassCap1uF
     power_3v3 ~ bypass_cap_1uF.power
+
+    i2c = new I2C
+    i2c ~ micro.i2c
+    uart = new UART
+    uart ~ micro.uart
+    spi = new SPI
+    spi ~ micro.spi
+    qspi = new QSPI
+    qspi ~ micro.qspi
+    usb2 = new USB2
+    usb2 ~ micro.usb2
 
 module USB_Powered_RP2040Kit from RP2040_3v3_Power:
     osc = new _Oscillator
