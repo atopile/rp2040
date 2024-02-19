@@ -23,7 +23,7 @@ module RP2040_3v3_Power:
     power_1V.gnd ~ micro.gnd
 
     # Power the 1V rail from the internal regulator
-    micro.vreg_vin ~ power_3v3.vcc 
+    micro.vreg_vin ~ power_3v3.vcc
     micro.vreg_vout ~ micro.dvdd
 
     # Bypass capacitors 100nF - 3V3
@@ -65,7 +65,7 @@ module RP2040_3v3_Power:
     uart = new UART
     uart ~ micro.uart
     usb2 = new USB2
-    usb2 ~ micro.usb
+    usb2 ~ micro.usb2
 
 
 module USB_Powered_RP2040Kit from RP2040_3v3_Power:
