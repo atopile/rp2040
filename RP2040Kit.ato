@@ -4,66 +4,80 @@ import Resistor from "generics/resistors.ato"
 import Capacitor from "generics/capacitors.ato"
 import ButtonPullup from "generics/buttons.ato"
 
-import I2C from "generics/interfaces.ato"
-import Power from "generics/interfaces.ato"
-import QSPI from "generics/interfaces.ato"
-import SPI from "generics/interfaces.ato"
-import USB2 from "generics/interfaces.ato"
-import UART from "generics/interfaces.ato"
+from "generics/interfaces.ato" import I2C, SPI, UART, USB2, QSPI, Power
 
-
-module RP2040Kit:
+module RP2040_3v3_Power:
     # Microcontroller
     micro = new RP2040
 
-    power = new Power
-    power.vcc ~ micro.vcc
-    power.gnd ~ micro.gnd
+    # This kit uses 3.3v for power
+    power_3v3 = new Power
 
+    # Apply power to the RP2040
+    power_3v3 ~ micro.usb_phy_power
+    power_3v3 ~ micro.iovdd_power
+
+    # 1V power for internal DVDD digital logic
     power_1V = new Power
     power_1V.vcc ~ micro.dvdd
     power_1V.gnd ~ micro.gnd
 
-    i2c = new I2C
-    i2c.sda ~ micro.gpio20
-    i2c.scl ~ micro.gpio21
+    # Power the 1V rail from the internal regulator
+    micro.vreg_vin ~ power_3v3.vcc
+    micro.vreg_vout ~ micro.dvdd
 
+    # Bypass capacitors 100nF - 3V3
+    bypass_cap_100nF_1 = new BypassCap100nF
+    bypass_cap_100nF_2 = new BypassCap100nF
+    bypass_cap_100nF_3 = new BypassCap100nF
+    bypass_cap_100nF_4 = new BypassCap100nF
+    bypass_cap_100nF_5 = new BypassCap100nF
+
+    power_3v3 ~ bypass_cap_100nF_1.power
+    power_3v3 ~ bypass_cap_100nF_2.power
+    power_3v3 ~ bypass_cap_100nF_3.power
+    power_3v3 ~ bypass_cap_100nF_4.power
+    power_3v3 ~ bypass_cap_100nF_5.power
+
+    # Bypass capacitors 1uF - 3V3
+    bypass_cap_1uF = new BypassCap1uF
+    power_3v3 ~ bypass_cap_1uF.power
+
+    # Bypass capacitors 100nF - 1V
+    bypass_cap_100nF_6 = new BypassCap100nF
+    bypass_cap_100nF_7 = new BypassCap100nF
+    bypass_cap_100nF_8 = new BypassCap100nF
+
+    power_1V ~ bypass_cap_100nF_6.power
+    power_1V ~ bypass_cap_100nF_7.power
+    power_1V ~ bypass_cap_100nF_8.power
+
+    # Bypass capacitors 1uF - 1V
+    bypass_cap_1uF_1 = new BypassCap1uF
+    power_1V ~ bypass_cap_1uF_1.power
+
+    i2c = new I2C
+    i2c ~ micro.i2c
+    spi = new SPI
+    spi ~ micro.spi
+    qspi = new QSPI
+    qspi ~ micro.qspi
+    uart = new UART
+    uart ~ micro.uart
+    usb2 = new USB2
+    usb2 ~ micro.usb2
+
+
+module USB_Powered_RP2040Kit from RP2040_3v3_Power:
     osc = new _Oscillator
     osc.input ~ micro.xin
     osc.output ~ micro.xout
     osc.gnd ~ micro.gnd
 
-    # UART interface
-    uart = new UART
-    uart.tx ~ micro.gpio4
-    uart.rx ~ micro.gpio5
-
-    # SPI interface
-    spi = new SPI
-    spi.cs ~ micro.gpio9
-    spi.mosi ~ micro.gpio11
-    spi.miso ~ micro.gpio8
-    spi.sck ~ micro.gpio10
-
-    spi1 = new SPI
-    spi1.cs ~ micro.gpio7
-    spi1.mosi ~ micro.gpio11
-    spi1.miso ~ micro.gpio8
-    spi1.sck ~ micro.gpio10
-
-    # QSPI interface
-    qspi = new QSPI
-    qspi.cs ~ micro.qspi_ss_n
-    qspi.sck ~ micro.qspi_sclk
-    qspi.io0 ~ micro.qspi_sd0
-    qspi.io1 ~ micro.qspi_sd1
-    qspi.io2 ~ micro.qspi_sd2
-    qspi.io3 ~ micro.qspi_sd3
-
     # Flash
     flash = new _W25Q128JVSIQ
-    power ~ flash.power
-    qspi ~ flash.qspi
+    power_3v3 ~ flash.power
+    micro.qspi ~ flash.qspi
 
     # USB
     usb_if = new USB2 # depricated name
@@ -89,15 +103,15 @@ module RP2040Kit:
     bypass_cap_100nF_4 = new BypassCap100nF
     bypass_cap_100nF_5 = new BypassCap100nF
 
-    power ~ bypass_cap_100nF_1.power
-    power ~ bypass_cap_100nF_2.power
-    power ~ bypass_cap_100nF_3.power
-    power ~ bypass_cap_100nF_4.power
-    power ~ bypass_cap_100nF_5.power
+    power_3v3 ~ bypass_cap_100nF_1.power
+    power_3v3 ~ bypass_cap_100nF_2.power
+    power_3v3 ~ bypass_cap_100nF_3.power
+    power_3v3 ~ bypass_cap_100nF_4.power
+    power_3v3 ~ bypass_cap_100nF_5.power
 
     # Bypass capacitors 1uF - 3V3
     bypass_cap_1uF = new BypassCap1uF
-    power ~ bypass_cap_1uF.power
+    power_3v3 ~ bypass_cap_1uF.power
 
     # Bypass capacitors 100nF - 1V
     bypass_cap_100nF_6 = new BypassCap100nF
@@ -114,12 +128,12 @@ module RP2040Kit:
 
     # Reset
     reset_btn = new ButtonPullup
-    reset_btn.power ~ power
+    reset_btn.power ~ power_3v3
     reset_btn.out ~ micro.run
 
     # Boot
     boot_btn = new ButtonPullup
-    boot_btn.power ~ power
+    boot_btn.power ~ power_3v3
     boot_btn.out ~ micro.qspi_ss_n
     boot_btn.pullup.value = 10kohms +/- 5%
 
