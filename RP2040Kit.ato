@@ -67,9 +67,9 @@ module RP2040Core:
     boot_btn.pullup.value = 10kohms +/- 5%
 
     # Configure the USB series resistors
-    r_usb_d_plus.value = 27kohms +/- 5%
+    r_usb_d_plus.value = 27ohms +/- 5%
     r_usb_d_plus.footprint = "R0402"
-    r_usb_d_minus.value = 27kohms +/- 5%
+    r_usb_d_minus.value = 27ohms +/- 5%
     r_usb_d_minus.footprint = "R0402"
 
     # Connect series resistors to usb
