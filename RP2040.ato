@@ -82,6 +82,7 @@ component RP2040:
     # IOVDD is a nominal 3v3
     iovdd_power = new Power
     iovdd_power.vcc ~ iovdd
+    iovdd_power.vcc ~ adc_avdd
     iovdd_power.gnd ~ gnd
 
     # I2C interface
