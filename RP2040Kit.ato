@@ -156,9 +156,6 @@ module RP2040Kit:
 
 component BypassCap from Capacitor:
     footprint = "R0402"
-    power = new Power
-    power.vcc ~ p1
-    power.gnd ~ p2
 
 
 component BypassCap100nF from BypassCap:
