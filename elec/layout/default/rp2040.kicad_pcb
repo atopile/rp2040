@@ -132,7 +132,7 @@
     (net 4 "gnd")
     (net 5 "hv")
     (net 6 "io3")
-    (net 7 "sck-1")
+    (net 7 "sck")
     (net 8 "io0")
     (net 9 "xout")
     (net 10 "out")
@@ -152,7 +152,7 @@
     (net 24 "gpio7")
     (net 25 "miso")
     (net 26 "gpio21")
-    (net 27 "sck")
+    (net 27 "sck-1")
     (net 28 "mosi")
     (net 29 "gpio12")
     (net 30 "gpio13")
@@ -191,7 +191,7 @@
                 )
             )
         )
-        (property "Value" "20pF ±5% 50V C0G"
+        (property "Value" "22pF ±5% 50V C0G"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -239,7 +239,7 @@
                 )
             )
         )
-        (property "LCSC" "C1554"
+        (property "LCSC" "C106203"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -263,7 +263,7 @@
                 )
             )
         )
-        (property "Partnumber" "0402CG200J500NT"
+        (property "Partnumber" "CC0402JRNPO9BN220"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -275,7 +275,7 @@
                 )
             )
         )
-        (property "Manufacturer" "FH(Guangdong Fenghua Advanced Tech)"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -287,7 +287,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "50V 20pF C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 22pF NP0 ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -299,7 +299,7 @@
                 )
             )
         )
-        (property "PARAM_capacitance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 1.9e-11, \"max\": 2.1e-11}}]}}, \"unit\": \"farad\"}}"
+        (property "PARAM_capacitance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 2.09e-11, \"max\": 2.31e-11}}]}}, \"unit\": \"farad\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -507,7 +507,7 @@
                 )
             )
         )
-        (property "Value" "20pF ±5% 50V C0G"
+        (property "Value" "22pF ±5% 50V C0G"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -555,7 +555,7 @@
                 )
             )
         )
-        (property "LCSC" "C1554"
+        (property "LCSC" "C106203"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -579,7 +579,7 @@
                 )
             )
         )
-        (property "Partnumber" "0402CG200J500NT"
+        (property "Partnumber" "CC0402JRNPO9BN220"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -591,7 +591,7 @@
                 )
             )
         )
-        (property "Manufacturer" "FH(Guangdong Fenghua Advanced Tech)"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -603,7 +603,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "50V 20pF C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 22pF NP0 ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -615,7 +615,7 @@
                 )
             )
         )
-        (property "PARAM_capacitance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 1.9e-11, \"max\": 2.1e-11}}]}}, \"unit\": \"farad\"}}"
+        (property "PARAM_capacitance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 2.09e-11, \"max\": 2.31e-11}}]}}, \"unit\": \"farad\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -823,7 +823,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -871,7 +871,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -895,7 +895,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -907,7 +907,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -919,7 +919,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -955,7 +955,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1367,7 +1367,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -1415,7 +1415,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1439,7 +1439,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1451,7 +1451,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1463,7 +1463,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1499,7 +1499,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1639,7 +1639,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -1687,7 +1687,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1711,7 +1711,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1723,7 +1723,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1735,7 +1735,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1771,7 +1771,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1911,7 +1911,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -1959,7 +1959,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1983,7 +1983,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -1995,7 +1995,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2007,7 +2007,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2043,7 +2043,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2183,7 +2183,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -2231,7 +2231,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2255,7 +2255,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2267,7 +2267,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2279,7 +2279,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2303,7 +2303,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2455,7 +2455,7 @@
                 )
             )
         )
-        (property "Value" "1µF ±10% 16V X5R"
+        (property "Value" "1µF ±10% 25V X5R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -2503,7 +2503,7 @@
                 )
             )
         )
-        (property "LCSC" "C29266"
+        (property "LCSC" "C52923"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2527,7 +2527,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05A105KO5NNNC"
+        (property "Partnumber" "CL05A105KA5NQNC"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2551,7 +2551,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 1uF X5R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "25V 1uF X5R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2575,7 +2575,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 25.0, \"max\": 25.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2727,7 +2727,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -2775,7 +2775,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2799,7 +2799,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2811,7 +2811,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2823,7 +2823,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -2859,7 +2859,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -3319,7 +3319,7 @@
                 )
             )
         )
-        (property "LCSC" "C25100"
+        (property "LCSC" "C138021"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -3343,7 +3343,7 @@
                 )
             )
         )
-        (property "Partnumber" "0402WGF270JTCE"
+        (property "Partnumber" "RC0402FR-0727RL"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -3355,7 +3355,7 @@
                 )
             )
         )
-        (property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -3591,7 +3591,7 @@
                 )
             )
         )
-        (property "LCSC" "C25100"
+        (property "LCSC" "C138021"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -3615,7 +3615,7 @@
                 )
             )
         )
-        (property "Partnumber" "0402WGF270JTCE"
+        (property "Partnumber" "RC0402FR-0727RL"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -3627,7 +3627,7 @@
                 )
             )
         )
-        (property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -4088,7 +4088,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -4136,7 +4136,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -4160,7 +4160,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -4172,7 +4172,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -4184,7 +4184,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -4220,7 +4220,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -4722,7 +4722,7 @@
             (at -3.55 2.2 0)
             (size 1.1 0.2)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 7 "sck-1")
+            (net 7 "sck")
             (pintype "stereo")
             (uuid "3a0d7e68-9005-4256-a0ab-38ca51e4d147")
         )
@@ -5034,7 +5034,7 @@
             (at -1 -3.55 270)
             (size 1.1 0.2)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 27 "sck")
+            (net 27 "sck-1")
             (pintype "stereo")
             (uuid "ba80733b-077f-4a94-9f0f-1ef83029877a")
         )
@@ -5108,7 +5108,7 @@
                 )
             )
         )
-        (property "Value" "100nF ±10% 16V X7R"
+        (property "Value" "100nF ±10% 50V X7R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -5156,7 +5156,7 @@
                 )
             )
         )
-        (property "LCSC" "C1525"
+        (property "LCSC" "C14663"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5180,7 +5180,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05B104KO5NNNC"
+        (property "Partnumber" "CC0603KRX7R9BB104"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5192,7 +5192,7 @@
                 )
             )
         )
-        (property "Manufacturer" "Samsung Electro-Mechanics"
+        (property "Manufacturer" "YAGEO"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5204,7 +5204,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "50V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5240,7 +5240,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 50.0, \"max\": 50.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5380,7 +5380,7 @@
                 )
             )
         )
-        (property "Value" "1µF ±10% 16V X5R"
+        (property "Value" "1µF ±10% 25V X5R"
             (at 0 4 0)
             (layer "F.Fab")
             (hide no)
@@ -5428,7 +5428,7 @@
                 )
             )
         )
-        (property "LCSC" "C29266"
+        (property "LCSC" "C52923"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5452,7 +5452,7 @@
                 )
             )
         )
-        (property "Partnumber" "CL05A105KO5NNNC"
+        (property "Partnumber" "CL05A105KA5NQNC"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5476,7 +5476,7 @@
                 )
             )
         )
-        (property "JLCPCB description" "16V 1uF X5R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
+        (property "JLCPCB description" "25V 1uF X5R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -5512,7 +5512,7 @@
                 )
             )
         )
-        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 16.0, \"max\": 16.0}}]}}, \"unit\": \"volt\"}}"
+        (property "PARAM_max_voltage" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 25.0, \"max\": 25.0}}]}}, \"unit\": \"volt\"}}"
             (at 0 0 0)
             (layer "User.9")
             (hide yes)
@@ -6161,7 +6161,7 @@
             (at 0.63 -3.53 270)
             (size 0.63 2.25)
             (layers "F.Cu" "F.Mask" "F.Paste")
-            (net 27 "sck")
+            (net 27 "sck-1")
             (pintype "stereo")
             (uuid "8e339a22-5e92-4eab-a9df-8b09f688d9fe")
         )
